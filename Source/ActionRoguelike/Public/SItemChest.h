@@ -4,16 +4,19 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "SGameplayInterface.h"
 #include "SItemChest.generated.h"
 
 UCLASS()
-class ACTIONROGUELIKE_API ASItemChest : public AActor
+class ACTIONROGUELIKE_API ASItemChest : public AActor, public ISGameplayInterface
 {
 	GENERATED_BODY()
 	
 public:	
-	// Sets default values for this actor's properties
-	ASItemChest();
+	UPROPERTY(EditAnywhere)
+		float TargetPitch;
+
+	void Interact_Implementation(APawn* InstigatorPawn);
 
 protected:
 	// Called when the game starts or when spawned
@@ -28,4 +31,6 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	// Sets default values for this actor's properties
+	ASItemChest();
 };
