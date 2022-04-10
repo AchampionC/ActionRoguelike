@@ -14,6 +14,10 @@ class ARPG_API ASCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
+protected:
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AActor> ProjectileClasses;
+
 public:
 	// Sets default values for this character's properties
 	ASCharacter();
@@ -30,6 +34,7 @@ protected:
 
 	void MoveForward(float Value);
 	void MoveRight(float Value);
+	void PrimaryFire();
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
