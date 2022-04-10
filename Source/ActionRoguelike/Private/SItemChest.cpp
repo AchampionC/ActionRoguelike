@@ -11,8 +11,8 @@ ASItemChest::ASItemChest()
 	BaseMesh = CreateDefaultSubobject<UStaticMeshComponent>("BaseMesh");
 	BaseMesh->SetupAttachment(RootComponent);
 
-	LitMesh = CreateDefaultSubobject<UStaticMeshComponent>("LitMesh");
-	LitMesh->SetupAttachment(BaseMesh);
+	LidMesh = CreateDefaultSubobject<UStaticMeshComponent>("LidMesh");
+	LidMesh->SetupAttachment(BaseMesh);
 }
 
 // Called when the game starts or when spawned

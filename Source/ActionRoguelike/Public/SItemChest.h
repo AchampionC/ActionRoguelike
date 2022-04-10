@@ -23,7 +23,7 @@ protected:
 	UStaticMeshComponent* BaseMesh;
 
 	UPROPERTY(EditAnywhere)
-	UStaticMeshComponent* LitMesh;
+	UStaticMeshComponent* LidMesh;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
