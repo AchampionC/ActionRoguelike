@@ -66,6 +66,7 @@ void ASCharacter::PrimaryAttack_TimeElapsed()
 	FTransform SpawnTM = FTransform(GetActorRotation(), Handlocation);
 	FActorSpawnParameters SpawnParameters;
 	SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+	SpawnParameters.Instigator = this;
 	GetWorld()->SpawnActor<AActor>(ProjectileClasses, SpawnTM, SpawnParameters);
 }
 
